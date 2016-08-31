@@ -28,8 +28,8 @@ def add_eyes_rect(gray, frame, eye_cascade, x, y, w, h):
 
 @click.command()
 @click.option('--eyes', help='add eyes detection', type=bool, default=False)
-@click.option('--face_cascade', help='frontal face classifier', default=os.path.join(DEFAULT_CASCADE_FOLDER, DEFAULT_FRONTAL_FACE_CLASSIFIER))
-@click.option('--eyes_cascade', help='eyes classifier', default=os.path.join(DEFAULT_CASCADE_FOLDER, DEFAULT_EYE_CLASSIFIER))
+@click.option('--face_cascade', help='frontal face classifier', type=click.Path(exists=True), default=os.path.join(DEFAULT_CASCADE_FOLDER, DEFAULT_FRONTAL_FACE_CLASSIFIER))
+@click.option('--eyes_cascade', help='eyes classifier', type=click.Path(exists=True), default=os.path.join(DEFAULT_CASCADE_FOLDER, DEFAULT_EYE_CLASSIFIER))
 def main(eyes, face_cascade, eyes_cascade):
     # Define cascade classifiers
     face_cascade = cv2.CascadeClassifier(face_cascade)
