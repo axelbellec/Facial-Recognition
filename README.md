@@ -50,6 +50,27 @@ You should see:
 
 ## Usage
 
+### Image
+
+```
+python img_detection.py --help
+
+Usage: img_detection.py [OPTIONS]
+
+Options:
+  --img PATH           image path
+  --face_cascade PATH  frontal face classifier
+  --help               Show this message and exit.
+```
+
+You can add your own face classifier.
+
+```
+python img_detection.py --img <path_to_your_img> --face_cascade <face_cascade_classifier>
+```
+
+### Webcam live detection
+
 ```
 python cam_detection.py --help
 
