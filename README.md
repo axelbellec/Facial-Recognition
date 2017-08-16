@@ -30,7 +30,7 @@ source activate opencv
 
 Once we launch the virtual environment, we can download OpenCV 3 through *binstar*:
 ```
-conda install -c https://conda.binstar.org/menpo opencv3
+conda install -c menpo opencv3 
 ```
 
 OpenCV3 is now installed. We just need to check if Python 
